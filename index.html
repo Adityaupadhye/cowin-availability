@@ -9,19 +9,24 @@
     <meta name="description" content="Check Covid vaccine availability in your area without OTP">
 
     <!-- <base href="/cowin-availability/"> -->
+    <!-- og tags -->
+    <meta property="og:url" content="https://cowin-availability.netlify.app"> 
+    <meta property="og:title" content="Cowin Availability">
+    <meta property="og:description" content="Check Covid vaccine availability in your area without OTP">
+    <meta property="og:image" content="https://cowin-availability.netlify.app/assets/app_logo_2.png">
 
-    <link rel="icon" href="./assets/app_logo.png" type="image/x-icon">
+    <link rel="icon" href="./assets/app_logo_2.png" type="image/x-icon">
     <link rel="shortcut icon" href="./assets/app_logo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/app_logo.png">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH2VN382F2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNGHMCBXY7"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-PH2VN382F2');
+        gtag('config', 'G-LNGHMCBXY7');
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -49,11 +54,17 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col">
-                            <input id="pinField" type="text" class="form-control" placeholder="PIN Code" aria-label="PIN Code" minlength="6" maxlength="6">
+                            <div class="form-floating">
+                                <input id="pinField" type="text" class="form-control" placeholder="PIN Code" aria-label="PIN Code" minlength="6" maxlength="6">
+                                <label for="pinField">PIN Code</label>
+                            </div>
                             <p id="error" class="text-danger"></p>
                         </div>
                         <div class="col">
-                            <input id="dateField" type="date" class="form-control" placeholder="Date" aria-label="Date">
+                            <div class="form-floating">
+                                <input id="dateField" type="date" class="form-control" placeholder="Date" aria-label="Date">
+                                <label for="dateField">Appointment Date</label>
+                            </div>
                             <p id="errorDate" class="text-danger"></p>
                         </div>
                     </div>
@@ -64,7 +75,7 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-4">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <div class="table-responsive">
